@@ -1,0 +1,191 @@
+html,
+button,
+input,
+select,
+textarea {
+    color: #333;
+	font-family: 'Georgia', 'Arial', sans-serif;	
+	font-weight:normal;
+	text-align: center;
+	background:#ddd;
+}
+body {
+    font-size: 1em;
+    line-height: 1.4;
+    margin:30px 0 0 0;
+	padding:0 10%;	
+}
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+img {vertical-align: middle;}
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+textarea {resize: vertical;}
+
+
+/* Custom styles */
+/* Fonts */
+@font-face {
+    font-family: 'bebas';
+    src: url('../fonts/BebasNeue-webfont.eot');
+    src: url('../fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BebasNeue-webfont.woff') format('woff'),
+         url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('../fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'dock';
+    src: url('../heavy_dock11-webfont.eot');
+    src: url('../heavy_dock11-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../heavy_dock11-webfont.woff') format('woff'),
+         url('../heavy_dock11-webfont.ttf') format('truetype'),
+         url('../heavy_dock11-webfont.svg#dock11regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'sansus';
+    src: url('../fonts/sansus_webissimo-regular-webfont.eot');
+    src: url('../fonts/sansus_webissimo-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sansus_webissimo-regular-webfont.woff') format('woff'),
+         url('../fonts/sansus_webissimo-regular-webfont.ttf') format('truetype'),
+         url('../fonts/sansus_webissimo-regular-webfont.svg#sansus_webissimoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Text */
+h1,h2,h3,h4{
+    /*font-family:"dock", sans-serif;*/
+    /*font-family:"sanus", sans-serif;*/
+    font-family:"bebas", sans-serif;
+    text-shadow:#fff 1px 1px;
+    line-height: 1em;
+}
+
+/* Generic */
+a{
+	color: #aaa;
+	text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active{	color: #00d0e3; }
+
+li	{
+	margin:0 0 10px 10px;			
+	list-style-type:disc;
+}
+
+/* Specific */
+#contact {
+	position:absolute;
+	top:-2px;
+	right:-2px;
+	width:auto;
+	padding: 1em;
+}
+#contact a{
+	display: block;
+	font-size: 1.5em;
+	color: #333;
+	font-family: 'bebas',sans-serif;
+}
+#contact img{max-height: 30px; height: 1.5em;}
+
+
+.ready #coming-soon h1, 
+.ready #coming-soon h2{
+    opacity:1;
+}
+
+.ready #portfolio {
+    opacity:1;
+    top:0;
+}
+
+#portfolio article{
+    text-align: left;
+    float: left;
+    width:35%;
+    padding:20px 5%;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    -o-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+#portfolio article:nth-child(odd){
+    margin-right:15%;
+}
+#portfolio article:nth-child(even){
+    margin-left:15%;
+}
+
+
+#portfolio h1,
+#portfolio h2{
+    text-shadow:#999 1px 1px;
+    font-size:2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#portfolio img{
+    width:100%;
+    border: 4px solid #777;
+}
+#portfolio img:hover{
+    border: 4px solid #64d6eb;
+}
+
+#portfolio .leading{
+    margin:20px auto;
+    font-size:140%;
+}
+
+#portfolio ul{
+    display: block;
+    margin:0 0 0 20px;
+    padding:0 0 0 10px;
+}
+
+
+
+/*********  Smaller screen  **************/
+@media all and (max-width: 800px) {
+    html{padding:0; margin: 0;}
+    body{padding:10% 5% 5% 5%; margin: 0;}
+    #coming-soon h1 {font-size:2em; margin: 0 0 1em 0;}
+    #coming-soon h2{font-size:1.5em;}
+    #portfolio article{
+        float: none;
+        width:100%;
+        padding:20px 0;
+        margin: 0 0 3em 0 !important;
+    }
+    #portfolio .leading {font-size:1em;}
+    #portfolio h1,
+    #portfolio h2{font-size:1.8em;}         
+    #portfolio img{width:80%;margin:0 10%;}         
+    #portfolio ul{font-size:1em;}           
+    #contact em{display: none;}
+}
